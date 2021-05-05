@@ -29,8 +29,8 @@ public class Main {
         in.close();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Club[] pets = objectMapper.readValue(response.toString(), Club[].class);
-        List<Club> petList = new ArrayList(Arrays.asList(pets));
-        petList.forEach(x -> System.out.println("\n" + x.toString()));
+        Club[] clubs = objectMapper.readValue(response.toString(), Club[].class);
+        List<Club> clubList = new ArrayList(Arrays.asList(clubs));
+        clubList.forEach(x -> System.out.println("\n" + x.toString()));
     }
 }
