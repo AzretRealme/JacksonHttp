@@ -1,4 +1,4 @@
-package javalessons;
+package myApp;
 
 public class Status {
 

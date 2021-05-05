@@ -1,5 +1,5 @@
-package javalessons;
-import org.codehaus.jackson.map.ObjectMapper;
+package myApp;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,14 +11,12 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
-        try {
-            Main.from_json_to_jackson_java();
-        } catch (Exception e) {
-            System.out.println(e);
+    public static void main(String[] args) throws Exception {
+            Main main = new Main();
+            main.sendGet();
         }
-    }
-    public static void from_json_to_jackson_java() throws Exception {
+
+        private void sendGet() throws Exception {
         String url = "https://cat-fact.herokuapp.com/facts";
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -31,8 +29,8 @@ public class Main {
         in.close();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Pet[] pets = objectMapper.readValue(response.toString(), Pet[].class);
-        List<Pet> petList = new ArrayList(Arrays.asList(pets));
+        Club[] pets = objectMapper.readValue(response.toString(), Club[].class);
+        List<Club> petList = new ArrayList(Arrays.asList(pets));
         petList.forEach(x -> System.out.println("\n" + x.toString()));
     }
 }

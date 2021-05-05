@@ -1,6 +1,6 @@
-package javalessons;
+package myApp;
 
-public class Pet {
+public class Club {
 
     private Status status;
     public String type;
@@ -14,7 +14,7 @@ public class Pet {
     public String createdAt;
     public boolean used;
 
-    public Pet(Status status, String type, boolean deleted, String id, String user, String text, int __v, String source, String updatedAt, String createdAt, boolean used) {
+    public Club(Status status, String type, boolean deleted, String id, String user, String text, int __v, String source, String updatedAt, String createdAt, boolean used) {
         this.status = status;
         this.type = type;
         this.deleted = deleted;
@@ -28,7 +28,7 @@ public class Pet {
         this.used = used;
     }
 
-    public Pet() {
+    public Club() {
     }
 
     public Status getStatus() {
@@ -121,7 +121,7 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "Pet{" +
+        return "Club{" +
                 "status=" + status +
                 ", type='" + type + '\'' +
                 ", deleted=" + deleted +
